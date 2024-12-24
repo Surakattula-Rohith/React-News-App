@@ -36,19 +36,19 @@ const RandomNews = () => {
   }, []);
 
   return (
-    <div className="flex-grow p-2 flex flex-col items-center justify-center min-h-screen">
-      {loading && <p className="text-black">Loading a random article...</p>}
+    <div >
+      {loading && <p >Loading a random article...</p>}
       {!loading && article && (
-        <div className="w-full max-w-2xl">
-          <h2 className="text-xl font-semibold text-black mb-4 text-center">Random Article</h2>
-          <div className="bg-gray-800 p-4 rounded shadow-lg">
+        <div >
+          <h2 >Random Article</h2>
+          <div>
             <ul>
               <NewsCard result={article} c/>
             </ul>
           </div>
         </div>
       )}
-      {!loading && !article && <p className="text-black">No article found.</p>}
+      {!loading && !article && <p >No article found.</p>}
     </div>
   );
 };

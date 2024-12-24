@@ -9,7 +9,6 @@ import TrendingNews from './Components/TrendingNews';
 import SearchBar from './Components/SearchBar';
 import RandomNews from './Components/RandomNews';
 import { Routes, Route, Link } from "react-router-dom";
-import Timer from "./Components/Timer";
 
 
 function App() {

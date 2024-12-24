@@ -43,22 +43,22 @@ const TrendingResults = ({ topic }) => {
     <>
       <div className="mt-4">
         {loading && (
-          <p className="text-black">
+          <p >
             Loading results for: <strong>{topic}</strong>
           </p>
         )}
         {!loading && results.length === 0 && (
-          <p className="text-black">
+          <p >
             No results found for: <strong>{topic}</strong>
           </p>
         )}
 
         {!loading && results.length > 0 && (
           <div>
-            <h2 className="text-xl font-semibold text-black mb-4">
+            <h2 >
               Trending news for: <strong>{topic}</strong>
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul >
               {results.map((result, index) => (
                 <NewsCard key={index} result={result} />
               ))}

@@ -7,26 +7,25 @@ import { Routes, Route, Link, Outlet } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <nav className="bg-gray-700 text-white w-full z-10 p-4 flex justify-between items-center">
+      <nav>
         <Link
           to="trending"
-          className="bg-green-500 py-2 px-4 rounded hover:bg-green-600 transition"
+          
         >
           Trending
         </Link>
 
-        <Link to="search" className="text-lg font-bold">
+        <Link to="search" >
           Search
         </Link>
 
         <Link
           to="random"
-          className="bg-green-500 py-2 px-4 rounded hover:bg-green-600 transition"
         >
           Random News
         </Link>
       </nav>
-      <div className="h-4"></div>
+      <div ></div>
       <Outlet />
     </div>
   );
