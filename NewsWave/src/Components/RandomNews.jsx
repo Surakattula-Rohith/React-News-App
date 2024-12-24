@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import NewsCard from "./NewsCard"; // Import NewsCard
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import NewsCard from './NewsCard'; // Assuming NewsCard is a separate component
 
 const RandomNews = () => {
   const [article, setArticle] = useState(null);
@@ -36,21 +36,32 @@ const RandomNews = () => {
   }, []);
 
   return (
-    <div >
-      {loading && <p >Loading a random article...</p>}
+    <div className="p-8 bg-gray-50 rounded-lg shadow-lg max-w-4xl mx-auto mt-8">
+      {loading && (
+        <p className="text-blue-500 font-medium text-lg text-center">
+          Loading a random article...
+        </p>
+      )}
       {!loading && article && (
-        <div >
-          <h2 >Random Article</h2>
-          <div>
+        <div>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+            Random Article
+          </h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
             <ul>
-              <NewsCard result={article} c/>
+              <NewsCard result={article} />
             </ul>
           </div>
         </div>
       )}
-      {!loading && !article && <p >No article found.</p>}
+      {!loading && !article && (
+        <p className="text-red-500 font-medium text-lg text-center">
+          No article found.
+        </p>
+      )}
     </div>
   );
 };
 
 export default RandomNews;
+
