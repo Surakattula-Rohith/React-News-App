@@ -8,7 +8,7 @@ import Publishers from "./Components/Publishers";
 import TrendingNews from './Components/TrendingNews';
 import SearchBar from './Components/SearchBar';
 import RandomNews from './Components/RandomNews';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {

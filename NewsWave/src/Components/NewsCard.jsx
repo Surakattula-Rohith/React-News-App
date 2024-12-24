@@ -1,20 +1,31 @@
 const NewsCard = ({ result }) => {
   return (
-    <li >
-      <a href={result.url} target="_blank" rel="noopener noreferrer" >
+    <li className="bg-white rounded-lg shadow-md hover:shadow-2xl hover:-translate-y-1 transform transition-all duration-300 overflow-hidden">
+      <a
+        href={result.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block group"
+      >
         {result.thumbnail && (
-          <img
-            src={result.thumbnail}
-            alt={result.title}
-            
-          />
+          <div className="overflow-hidden">
+            <img
+              src={result.thumbnail}
+              alt={result.title}
+              className="w-full h-40 object-cover group-hover:scale-110 transform transition-transform duration-300"
+            />
+          </div>
         )}
-        <div >
-          <h3 >
+        <div className="p-4">
+          <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">
             {result.title}
           </h3>
-          <p >{new Date(result.date).toLocaleDateString()}</p>
-          <p >{result.excerpt}</p>
+          <p className="text-sm text-gray-500 mb-2">
+            {new Date(result.date).toLocaleDateString()}
+          </p>
+          <p className="text-gray-700 line-clamp-3 group-hover:text-gray-800 transition-colors duration-300">
+            {result.excerpt}
+          </p>
         </div>
       </a>
     </li>
